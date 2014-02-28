@@ -4,11 +4,24 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 
 <sqlMap namespace="Employee">
+	<resultMap class="test.ad.rnd.main.Employee" id="resultEmployee"
+		xmlName="resultEmployee">
+		<result property="id" column="id" />
+		<result property="first_name" column="first_name" />
+		<result property="last_name" column="last_name" />
+		<result property="salary" column="salary" />
+	</resultMap>
+	
 	<insert id="insert" parameterClass="test.ad.rnd.main.Employee">
 
-		insert into EMPLOYEE(first_name, last_name, salary)
-		values (#first_name#, #last_name#, #salary#)
+		insert into
+		EMPLOYEE(first_name, last_name, salary)
+		values (#first_name#,
+		#last_name#, #salary#)
 
 	</insert>
-
+	<select id="select" resultMap="resultEmployee">
+		select * from EMPLOYEE where
+		first_name like 'Ashita'
+	</select>
 </sqlMap>

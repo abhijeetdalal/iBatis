@@ -16,8 +16,8 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
 			<property name="Pool.MaximumIdleConnections" value="5" />
 			<property name="Pool.MaximumCheckoutTime" value="150000" />
 			<property name="Pool.MaximumTimeToWait" value="500" />
-			<!-- <property name="Pool.PingQuery" value="select 1 from Employee" />
-			<property name="Pool.PingEnabled" value="false" /> -->
+			<!-- <property name="Pool.PingQuery" value="select 1 from Employee" /> 
+				<property name="Pool.PingEnabled" value="false" /> -->
 		</dataSource>
 	</transactionManager>
 	<sqlMap resource="test/ad/rnd/main/resources/Employee.xml" />

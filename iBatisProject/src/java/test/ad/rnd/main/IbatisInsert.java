@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.sql.SQLException;
 
-import com.ibatis.common.resources.Resources;
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.ibatis.sqlmap.client.SqlMapClientBuilder;
 
@@ -18,20 +17,21 @@ import com.ibatis.sqlmap.client.SqlMapClientBuilder;
  * 
  */
 public class IbatisInsert {
-	public static void main(String[] args) throws IOException, SQLException {
-		InputStream inputStream = IbatisInsert.class.getResourceAsStream("resources/SqlMapConfig.xml");
-		
-		Reader rd = new InputStreamReader(inputStream);
-		//Reader rd = Resources.getResourceAsReader("SqlMapConfig.xml");
-		SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
+    public static void main(String[] args) throws IOException, SQLException {
+	InputStream inputStream = IbatisInsert.class
+		.getResourceAsStream("resources/SqlMapConfig.xml");
 
-		/* This would insert one record in Employee table. */
-		System.out.println("Going to insert record.....");
-		Employee em = new Employee("Ashita", "Dalal", 5000);
+	Reader rd = new InputStreamReader(inputStream);
+	// Reader rd = Resources.getResourceAsReader("SqlMapConfig.xml");
+	SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
 
-		smc.insert("Employee.insert", em);
+	/* This would insert one record in Employee table. */
+	System.out.println("Going to insert record.....");
+	Employee em = new Employee("Ashita", "Dalal", 5000);
 
-		System.out.println("Record Inserted Successfully ");
+	smc.insert("Employee.insert", em);
 
-	}
+	System.out.println("Record Inserted Successfully ");
+
+    }
 }
