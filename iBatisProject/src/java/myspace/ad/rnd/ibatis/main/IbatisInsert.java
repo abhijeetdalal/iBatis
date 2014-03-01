@@ -1,7 +1,7 @@
 /**
  * 
  */
-package test.ad.rnd.main;
+package myspace.ad.rnd.ibatis.main;
 
 import java.io.IOException;
 import java.io.InputStream;

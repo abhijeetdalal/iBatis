@@ -1,12 +1,13 @@
-package test.ad.rnd.main;
+package myspace.ad.rnd.ibatis.main;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.sql.SQLException;
 
-import test.ad.rnd.main.Employee;
-import test.ad.rnd.main.IbatisInsert;
+import myspace.ad.rnd.ibatis.main.Employee;
+import myspace.ad.rnd.ibatis.main.IbatisInsert;
+
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.ibatis.sqlmap.client.SqlMapClientBuilder;

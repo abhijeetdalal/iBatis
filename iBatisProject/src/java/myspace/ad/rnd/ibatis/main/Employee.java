@@ -1,7 +1,7 @@
 /**
  * 
  */
-package test.ad.rnd.main;
+package myspace.ad.rnd.ibatis.main;
 
 /**
  * @author Abhijeet Dalal
