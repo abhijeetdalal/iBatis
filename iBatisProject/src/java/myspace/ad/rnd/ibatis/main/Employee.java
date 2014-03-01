@@ -4,8 +4,9 @@
 package myspace.ad.rnd.ibatis.main;
 
 /**
- * @author Abhijeet Dalal
+ * Employee class used in all the queries in this project.
  * 
+ * @author Abhijeet Dalal
  */
 public class Employee {
     private int id;
