@@ -13,25 +13,32 @@ import com.ibatis.sqlmap.client.SqlMapClient;
 import com.ibatis.sqlmap.client.SqlMapClientBuilder;
 
 /**
- * @author Abhijeet Dalal
+ * Example class for Insert query execution using iBatis.
  * 
+ * @author Abhijeet Dalal
  */
-public class IbatisInsert {
+public class InsertExecution {
     public static void main(String[] args) throws IOException, SQLException {
-	InputStream inputStream = IbatisInsert.class
+	// Get iBatis configuration file as stream.
+	InputStream inputStream = InsertExecution.class
 		.getResourceAsStream("resources/SqlMapConfig.xml");
 
+	// Convert the stream into Reader.
 	Reader rd = new InputStreamReader(inputStream);
-	// Reader rd = Resources.getResourceAsReader("SqlMapConfig.xml");
+
 	SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
 
-	/* This would insert one record in Employee table. */
-	System.out.println("Going to insert record.....");
+	System.out.println("Insert record in Database.....");
+
+	// Create a new Employee object to insert to Database.
 	Employee em = new Employee("Ashita", "Dalal", 5000);
 
+	// Main statement that will push your record into Database.
+	// This statement will search for 'Employee' name space in the
+	// Employee.xml file and then will search for the id 'insert'.
 	smc.insert("Employee.insert", em);
 
-	System.out.println("Record Inserted Successfully ");
+	System.out.println("Record inserted successfully!");
 
     }
 }
