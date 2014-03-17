@@ -20,5 +20,5 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
 				<property name="Pool.PingEnabled" value="false" /> -->
 		</dataSource>
 	</transactionManager>
-	<sqlMap resource="myspace/ad/rnd/ibatis/main/resources/Employee.xml" />
+	<sqlMap resource="myspace/ad/rnd/ibatis/resources/Employee.xml" />
 </sqlMapConfig>

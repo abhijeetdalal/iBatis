@@ -1,13 +1,15 @@
 /**
  * 
  */
-package myspace.ad.rnd.ibatis.main;
+package myspace.ad.rnd.ibatis.execute;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.sql.SQLException;
+
+import myspace.ad.rnd.ibatis.bean.Employee;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.ibatis.sqlmap.client.SqlMapClientBuilder;

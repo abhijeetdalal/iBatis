@@ -1,10 +1,12 @@
-package myspace.ad.rnd.ibatis.main;
+package myspace.ad.rnd.ibatis.execute;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.sql.SQLException;
+
+import myspace.ad.rnd.ibatis.bean.Employee;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.ibatis.sqlmap.client.SqlMapClientBuilder;
@@ -19,7 +21,7 @@ public class SelectExecution {
     public static void main(String[] args) throws IOException, SQLException {
 	// Get iBatis configuration file as stream.
 	InputStream inputStream = InsertExecution.class
-		.getResourceAsStream("resources/SqlMapConfig.xml");
+		.getResourceAsStream("../resources/SqlMapConfig.xml");
 
 	// Convert the stream into Reader.
 	Reader rd = new InputStreamReader(inputStream);
